@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How Do You Feel?</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HOME PAGE -->
+  <section id="home-page" class="page active">
+    <div class="top-bar">
+      <span class="home-btn">home</span>
+      <span class="about-btn">about</span>
+    </div>
+
+    <h1 class="main-question">How do you feel right now…?</h1>
+
+    <div class="mood-grid">
+      <button class="mood-btn" data-mood="sad">Sad</button>
+      <button class="mood-btn" data-mood="lonely">Lonely / Empty</button>
+      <button class="mood-btn" data-mood="overwhelmed">Overwhelmed</button>
+      <button class="mood-btn" data-mood="unfocused">Unfocused</button>
+      <button class="mood-btn" data-mood="anxious">Anxious</button>
+      <button class="mood-btn" data-mood="grind">Ready to Grind</button>
+      <button class="mood-btn" data-mood="bad_urges">Bad Urges</button>
+      <button class="mood-btn" data-mood="inspiration">Want Inspiration</button>
+      <button class="mood-btn" data-mood="beast">Beast Mode</button>
+      <button class="mood-btn" data-mood="random">Don’t know — you tell me</button>
+    </div>
+  </section>
+
+  <!-- MOOD PAGE -->
+  <section id="mood-page" class="page">
+    <div class="top-bar">
+      <span class="home-btn">home</span>
+    </div>
+
+    <h2 class="mood-heading">Here’s your quote… I hope you feel better.</h2>
+
+    <div class="quote-box" id="quote-text">
+      Quote goes here
+    </div>
+
+    <div class="explanation-box" id="quote-explanation">
+      Interpretation + motivating line goes here
+    </div>
+
+    <div class="action-buttons">
+      <button id="exit-btn">Exit</button>
+      <button id="another-btn">Another one</button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
