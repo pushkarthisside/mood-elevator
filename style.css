@@ -41,25 +41,43 @@ body {
 }
 
 .mood-grid {
+  /* --- Layout change: use Flexbox for a more natural centered wrap (was Grid) --- */
   margin-top: 50px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 20px;
-  max-width: 800px;
+  display: flex; /* changed from grid to flex for even wrapping and easy centering */
+  flex-wrap: wrap;
+  justify-content: center; /* center the buttons in the available row */
+  gap: 24px; /* spacing between buttons */
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 20px;
 }
 
 .mood-btn {
-  padding: 16px;
-  border-radius: 12px;
-  font-size: 16px;
-  background: rgba(255,255,255,0.85);
+  /* Button styling (kept similar look, adjusted sizing for balanced layout) */
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 15px;
+  background: rgba(255,255,255,0.95);
   transition: transform 0.2s, box-shadow 0.2s;
+  min-width: 140px; /* keep buttons readable */
+  text-align: center;
+}
+
+.mood-btn.wide {
+  /* special class applied to the 'Don't know' button to make it wider/centered */
+  min-width: 320px;
+  flex-basis: 320px;
 }
 .mood-btn:hover {
   transform: translateY(-4px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* Responsive: reduce button sizes on small screens */
+@media (max-width: 560px) {
+  .mood-btn { min-width: 120px; padding: 10px 16px; }
+  .mood-btn.wide { min-width: 220px; flex-basis: 220px; }
 }
 
 .quote-box {
