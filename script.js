@@ -114,15 +114,15 @@ const quotes = {
   beast_mode: [
     {
       quote: "I'm not motivated by money. I'm motivated by the work. The work is the only thing that matters.",
-      explanation: "Chasing results alone—status, praise, money—burns you out because they're never fully in your control. When you fall in love with the process itself, you flip the game. No one can stop you from doing the work, and that makes you dangerous in the best way."
+      explanation: "Chasing results alone—status, praise, money—burns you out because they’re never fully in your control. When you fall in love with the process itself, you flip the game. No one can stop you from doing the work, and that makes you dangerous in the best way."
     },
     {
-      quote: "While they sleep, you work. While they eat, you train. While they party, you grind. This is the only way.",
-      explanation: "There will always be an easier path calling your name, and most people take it. Choosing the harder route when others relax is how you quietly separate yourself from average. Every focused block you put in while the world drifts is you voting for your future with your time."
+      quote : "While they sleep, you work. While they eat, you train. While they party, you grind. This is the only way." ,
+      explanation : "There will always be an easier path calling your name, and most people take it. Choosing the harder route when others relax is how you quietly separate yourself from average. Every focused block you put in while the world drifts is you voting for your future with your time."
     },
     {
-      quote: "Your limitation—it's only your lack of vision.",
-      explanation: "Hitting a wall can trick you into believing that's all you're capable of. But often it's not your ability that's capped—it's your idea of what's possible for you. When you expand that inner picture, your effort and creativity rise to match it, and suddenly the \"wall\" becomes just another step."
+      quote:  "Your limitation—it's only your lack of vision.",
+      explanation : " Hitting a wall can trick you into believing that’s all you’re capable of. But often it’s not your ability that’s capped—it’s your idea of what’s possible for you. When you expand that inner picture, your effort and creativity rise to match it, and suddenly the “wall” becomes just another step."
     }
   ],
 

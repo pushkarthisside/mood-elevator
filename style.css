@@ -51,10 +51,15 @@ body {
 }
 
 .mood-btn {
-  padding: 15px;
-  border: none;
-  background: #eee;
-  cursor: pointer;
+  padding: 16px;
+  border-radius: 12px;
+  font-size: 16px;
+  background: rgba(255,255,255,0.85);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.mood-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
 .quote-box {
@@ -83,3 +88,4 @@ body {
   background: #ccc;
   cursor: pointer;
 }
+
