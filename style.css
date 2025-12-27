@@ -1,83 +1,144 @@
 * {
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Cleaner font */
 }
 
 body {
   margin: 0;
-  background: #111;
+  background: #111; /* Fallback */
 }
 
 .page {
   display: none;
   min-height: 100vh;
-  padding: 40px;
+  padding: 20px;
 }
 
 .page.active {
   display: block;
 }
 
+/* --- HOME PAGE STYLES --- */
 #home-page {
-  background: linear-gradient(135deg, #f2994a, #f2c94c);
+  /* Smooth Orange to Yellowish gradient */
+  background: linear-gradient(to bottom right, #f48c42, #f6b93b);
   text-align: center;
+  overflow-x: hidden;
 }
 
+/* Top Bar: Spaced out corners */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  width: 100%;
+}
+
+/* Navigation Text Styling */
+.home-btn, .about-btn {
+  font-size: 16px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.home-btn {
+  color: #c0392b; /* Dark Red/Orange for Home */
+}
+
+.about-btn {
+  color: #fff;    /* White for About */
+}
+
+.home-btn:hover, .about-btn:hover {
+  opacity: 0.7;
+}
+
+/* --- TITLE & QUESTION --- */
+.title-container {
+  margin-top: 15px;
+  margin-bottom: 65px; /* Space between title and buttons */
+}
+
+.app-title {
+  font-size: 64px;
+  color: #416043; /* soft sky blue  */
+  font-style: italic;
+  font-weight: 400;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2); /* Soft shadow */
+}
+
+.main-question {
+  font-size: 28px;
+  color: #fff;
+  font-weight: 300;
+  margin-top: 20px;
+  opacity: 0.9;
+}
+
+/* --- BUTTON GRID (Spread Out) --- */
+.mood-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* Increased gap to spread them out */
+  gap: 40px 30px; 
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+.mood-btn {
+  background-color: rgba(220, 220, 220, 0.85);
+  border: none;
+  padding: 15px 35px;
+  font-size: 16px;
+  color: #333;
+  min-width: 160px;
+  border-radius: 12px; /* Rounded corners */
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s, background 0.2s;
+}
+
+.mood-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  background-color: rgba(200, 200, 200, 0.95);
+}
+
+.mood-btn:active {
+  transform: translateY(0);
+}
+
+/* The 'Don't know' button */
+.mood-btn.wide {
+  min-width: 300px;
+  background-color: rgba(220, 220, 220, 0.9);
+  margin-top: 20px; /* Extra space above the bottom button */
+}
+
+.mood-btn:hover {
+  transform: scale(1.05);
+  background-color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .app-title { font-size: 48px; }
+  .main-question { font-size: 22px; }
+  .mood-grid { gap: 20px; }
+}
+
+/* --- MOOD PAGE STYLES (Keep existing structure) --- */
 #mood-page {
   background: #e5e5e5;
   text-align: center;
 }
 
-.top-bar {
-  display: flex;
-  justify-content: space-between;
-  font-size: 14px;
-  color: red;
-}
-
-.main-question {
-  margin-top: 80px;
-  font-size: 32px;
-}
-
-.mood-grid {
-  /* --- Layout change: use Flexbox for a more natural centered wrap (was Grid) --- */
-  margin-top: 50px;
-  display: flex; /* changed from grid to flex for even wrapping and easy centering */
-  flex-wrap: wrap;
-  justify-content: center; /* center the buttons in the available row */
-  gap: 24px; /* spacing between buttons */
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 20px;
-}
-
-.mood-btn {
-  /* Button styling (kept similar look, adjusted sizing for balanced layout) */
-  padding: 12px 28px;
-  border-radius: 8px;
-  font-size: 15px;
-  background: rgba(255,255,255,0.95);
-  transition: transform 0.2s, box-shadow 0.2s;
-  min-width: 140px; /* keep buttons readable */
-  text-align: center;
-}
-
-.mood-btn.wide {
-  /* special class applied to the 'Don't know' button to make it wider/centered */
-  min-width: 320px;
-  flex-basis: 320px;
-}
-.mood-btn:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-}
-
-/* Responsive: reduce button sizes on small screens */
-@media (max-width: 560px) {
-  .mood-btn { min-width: 120px; padding: 10px 16px; }
-  .mood-btn.wide { min-width: 220px; flex-basis: 220px; }
+.mood-heading {
+  margin-top: 40px;
+  color: #333;
 }
 
 .quote-box {
@@ -85,6 +146,9 @@ body {
   padding: 20px;
   max-width: 600px;
   background: #d9a5a5;
+  border-radius: 8px;
+  font-size: 18px;
+  font-style: italic;
 }
 
 .explanation-box {
@@ -92,6 +156,7 @@ body {
   padding: 30px;
   max-width: 700px;
   background: #d99898;
+  border-radius: 8px;
 }
 
 .action-buttons {
@@ -101,9 +166,14 @@ body {
 .action-buttons button {
   margin: 0 20px;
   padding: 12px 25px;
-}
-.action-buttons button:hover {
-  background: #ccc;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
+  background-color: #333;
+  color: white;
+  transition: background 0.3s;
 }
 
+.action-buttons button:hover {
+  background: #555;
+}

@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" /> <!-- proper character encoding(Emojis,symbols) -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+  <!-- Makes the page responsive on different devices(looks good on mobile/tablet/desktop) -->
+
   <title>Mood Elevator</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -10,12 +13,16 @@
 
   <!-- HOME PAGE -->
   <section id="home-page" class="page active">
+
     <div class="top-bar">
       <span class="home-btn">home</span>
       <span class="about-btn">about</span>
     </div>
 
-    <h1 class="main-question">How do you feel right now…?</h1>
+    <div class="title-container">
+        <h1 class="app-title">Mood Elevator</h1>
+        <h2 class="main-question">How do you feel right now…?</h2>
+    </div>
 
     <div class="mood-grid">
       <button class="mood-btn" data-mood="sad">Sad</button>

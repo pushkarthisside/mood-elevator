@@ -10,7 +10,7 @@ const quotes = {
     {
       quote: "The cave you fear to enter holds the treasure you seek.",
       explanation: "The thing you're avoiding—the memory, the task, the truth—isn't there to destroy you; it's where your power is hiding. When you slowly face what scares you, you don't collapse, you evolve into someone stronger and more honest. You're closer to that hidden treasure than you feel right now."
-    },
+    }, 
     {
       quote: "This too shall pass. But while it's here, let it teach you.",
       explanation: "You don't have to fix this feeling instantly or pretend it doesn't hurt. It's moving through you, not moving in forever, and while it stays, it can quietly show you what you care about and what needs to change. You're allowed to feel, learn, and then gently step forward lighter than before."
