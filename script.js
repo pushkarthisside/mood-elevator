@@ -4,6 +4,8 @@ const quoteText = document.getElementById("quote-text");
 const quoteExplanation = document.getElementById("quote-explanation");
 
 let currentMood = null;
+let lastQuoteIndex = -1;
+
 
 const quotes = {
   sad: [
@@ -168,12 +170,19 @@ function showRandomQuote() {
   const moodQuotes = quotes[currentMood];
   if (!moodQuotes || moodQuotes.length === 0) return;
 
-  const randomIndex = Math.floor(Math.random() * moodQuotes.length);
-  const selected = moodQuotes[randomIndex];
+  let randomIndex;
 
+  do {
+    randomIndex = Math.floor(Math.random() * moodQuotes.length);
+  } while (randomIndex === lastQuoteIndex && moodQuotes.length > 1);
+
+  lastQuoteIndex = randomIndex;
+
+  const selected = moodQuotes[randomIndex];
   quoteText.textContent = `"${selected.quote}"`;
   quoteExplanation.textContent = selected.explanation;
 }
+
 
 document.getElementById("another-btn").addEventListener("click", showRandomQuote);
 document.getElementById("exit-btn").addEventListener("click", goHome);
@@ -182,4 +191,18 @@ document.querySelectorAll(".home-btn").forEach(btn => btn.addEventListener("clic
 function goHome() {
   moodPage.classList.remove("active");
   homePage.classList.add("active");
+}
+
+const themeToggle = document.getElementById("theme-toggle");
+
+if (themeToggle) { // Only run this if the button actually exists
+  themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+
+    if (document.body.classList.contains("dark-mode")) {
+      themeToggle.textContent = "☀️";
+    } else {
+      themeToggle.textContent = "🌙";
+    }
+  });
 }
